@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../images/covid-vax-bottle.jpeg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 9rem;
+}
+.logo {
+  height: 10rem;
+  width: 300px;
+}
+nav ul {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+}
+nav ul li a {
+  color: black;
+  font-weight: 100;
+  font-size: 1.5rem;
+}
+#btn a{
+  color: black;
+}
+.menubar {
+  width: 3rem;
+  display: none;
+}
+#close {
+  display: none;
+  font-size: 2.5rem;
+  color: black;
+  position: absolute;
+  top: 1%;
+  left: 5%;
+}
+.home-data {
+  padding: 3rem 9rem;
+  position: absolute;
+  top: 25%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.home-data p {
+  color: black;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+.home-data h1 {
+  font-size: 7.5rem;
+  color: black;
+}
+
+#btn {
+  width: 20rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  border: 2px solid black;
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.icons {
+  width: 30%;
+  margin: 2rem 0;
+  cursor: pointer;
+}
+.icons
+.fa{
+  color:rgb(0, 183, 255);
+  width: 4rem;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+  font-size: 30px;
+  border-radius: 10px ;
+  font-weight: 300;
+  background-color: transparent;
+}
+.icons .fa:hover {
+  transform: translateY(-0.6rem);
+}
+.social-links .fa:hover {
+  transform: translateY(-0.6rem);
+}
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10%;
+  /* background-color: #262626; */
+  height: 100vh;
+}
+.sidebar .social-links {
+  position: absolute;
+  top: 80%;
+  text-align: center;
+  transform: translateY(-50%);
+  padding: 5rem;
+}
+.social-links{
+  display: grid;
+  row-gap: 15px;
+}
+.social-links 
+.fa{
+  width: 4rem;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+  font-size: 30px;
+  border-radius: 10px ;
+  background-color: transparent;
+}
+.social-links img {
+  margin: 1rem 0;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.social-links img:hover {
+  transform: translateY(-0.6rem);
+}
+
+
+.bubbles {
+  position: absolute;
+  bottom: -88px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5rem;
+}
+.bubbles img {
+  width: 9rem;
+  animation: bubbles 3.5s linear infinite;
+}
+
+@keyframes bubbles {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-55rem);
+    opacity: 0;
+  }
+}
+
+.bubbles img:nth-child(1) {
+  animation-delay: 2s;
+}
+.bubbles img:nth-child(2) {
+  animation-delay: 1s;
+  width: 6%;
+}
+.bubbles img:nth-child(3) {
+  animation-delay: 3s;
+}
+.bubbles img:nth-child(4) {
+  animation-delay: 4.5s;
+  width: 5rem;
+  height: 5rem;
+}
+.bubbles img:nth-child(5) {
+  animation-delay: 3s;
+}
+.bubbles img:nth-child(6) {
+  animation-delay: 6s;
+  width: 4rem;
+  height: 4rem;
+}
+.bubbles img:nth-child(7) {
+  animation-delay: 2s;
+}
+.bubbles img:nth-child(8) {
+  animation-delay: 3s;
+  width: 4rem;
+  height: 4rem;
+}
+.bubbles img:nth-child(9) {
+  animation-delay: 6s;
+}
+.bubbles img:nth-child(10) {
+  animation-delay: 2s;
+  width: 4rem;
+  height: 4rem;
+}
+
+/* Media Querries   */
+
+@media (max-width: 930px) {
+  .sidebar .social-links {
+    padding: 0rem;
+  }
+}
+
+@media (max-width: 770px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 610px) {
+  html {
+    font-size: 45%;
+  }
+  .home-container {
+    padding: 3rem 4rem;
+  }
+  .home-data {
+    padding: 3rem 4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #close {
+    display: block;
+  }
+  .menubar {
+    display: block;
+  }
+  nav ul {
+    position: fixed;
+    display: block;
+    gap: 2rem;
+    top: 0;
+    height: 100vh;
+    background: #1880b591;
+    right: 0;
+    width: 18rem;
+    z-index: 999;
+    transition: width 0.4s ease;
+  }
+  nav ul li {
+    padding: 2.3rem 2rem;
+  }
+  nav ul li a {
+    position: absolute;
+    margin: 5rem 0;
+    font-size: 2rem;
+  }
+  .home-data h1 {
+    font-size: 5rem;
+  }
+  .home-data {
+    padding: 15rem 4rem;
+  }
+  .sidebar .social-links {
+    top: 88%;
+  }
+  #btn {
+    width: 15rem;
+  }
+}
